@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAPP Release Train</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb; --card: #ffffff; --border: #e4e3df;
+    --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #8a8880;
+    --accent: #2a78d6;
+    --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+    --good-bg: rgba(12,163,12,.10); --warning-bg: rgba(250,178,25,.14);
+    --serious-bg: rgba(236,131,90,.14); --neutral-bg: rgba(0,0,0,.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface: #1a1a19; --card: #222220; --border: #3a3936;
+      --ink: #ffffff; --ink-2: #c3c2b7; --ink-3: #8a8880;
+      --accent: #3987e5;
+      --good-bg: rgba(12,163,12,.18); --warning-bg: rgba(250,178,25,.14);
+      --serious-bg: rgba(236,131,90,.16); --neutral-bg: rgba(255,255,255,.07);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--surface); color: var(--ink);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  main { max-width: 1060px; margin: 0 auto; padding: 32px 20px 64px; }
+  header h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -.01em; }
+  header p.sub { color: var(--ink-2); margin: 0 0 10px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 28px; }
+  .badges img { height: 20px; display: block; }
+  h2 { font-size: 17px; margin: 40px 0 12px; }
+  h2 .hint { font-weight: 400; font-size: 13px; color: var(--ink-3); margin-left: 8px; }
+
+  /* ---- train rail ---- */
+  .rail { display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding: 6px 0 14px; }
+  .stop {
+    flex: 1 1 0; min-width: 150px; background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px 14px; text-align: center; position: relative;
+  }
+  .stop a.name { font-weight: 600; font-size: 15px; color: var(--ink); }
+  .stop .ver { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--ink-2); margin-top: 2px; }
+  .stop .role { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+  .stop.grail { border-style: dashed; }
+  .arrow { align-self: center; padding: 0 6px; color: var(--ink-3); font-size: 18px; flex: 0 0 auto; }
+  .arrow.human { color: var(--serious); font-size: 12px; text-align: center; line-height: 1.2; }
+
+  /* ---- ring cards ---- */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 2px; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+  .card h3 img { height: 18px; }
+  .card .repo { font-size: 13px; color: var(--ink-2); margin-bottom: 10px; }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; font-size: 13px; }
+  .kv dt { color: var(--ink-3); }
+  .kv dd { margin: 0; color: var(--ink-2); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card .links { margin-top: 10px; font-size: 13px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---- convergence matrix ---- */
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; background: var(--card); font-size: 13px; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--ink-2); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  td.file { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px; border-radius: 999px;
+    padding: 2px 9px; font-size: 12px; background: var(--neutral-bg); color: var(--ink-2);
+  }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-3); flex: 0 0 auto; }
+  .pill.good { background: var(--good-bg); } .pill.good .dot { background: var(--good); }
+  .pill.warn { background: var(--warning-bg); } .pill.warn .dot { background: var(--warning); }
+  .pill.pending { background: var(--serious-bg); } .pill.pending .dot { background: var(--serious); }
+  .sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink-3); font-size: 11px; }
+
+  /* ---- api endpoints ---- */
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
+  pre b { color: var(--ink); font-weight: 600; }
+  .ep { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; font-size: 13px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; }
+  .ep dt { color: var(--ink-3); }
+  .ep dd { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow: hidden; text-overflow: ellipsis; }
+  footer { margin-top: 48px; font-size: 13px; color: var(--ink-3); }
+  .updated { font-size: 12px; color: var(--ink-3); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>🚂 RAPP Release Train</h1>
+  <p class="sub">The pre-grail ring pipeline for <a href="https://github.com/kody-w/rapp-installer">kody-w/rapp-installer</a> —
+  every change enters at Canary and is promoted, tested, and soaked ring-by-ring before a human merges it into the grail.
+  This page is a zero-dependency dashboard over <a href="https://github.com/kody-w/rapp-static-apis">rapp-static-api/1.0</a>:
+  everything below is fetched live from static <code>raw.githubusercontent.com</code> data published by the train repos themselves.</p>
+  <div class="badges">
+    <img alt="train sync badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fkody-w%2Frapp-release-train%2Fmain%2Fapi%2Fv1%2Fbadge.json">
+    <span class="updated" id="reg-updated">loading registry…</span>
+  </div>
+</header>
+
+<h2>The line<span class="hint">click a stop to open its repo · versions fetched live from each repo's <code>rapp_brainstem/VERSION</code></span></h2>
+<div class="rail" id="rail"></div>
+
+<h2>Rings<span class="hint">status badges are each repo's own <code>preflight</code> workflow on <code>main</code></span></h2>
+<div class="cards" id="cards"></div>
+
+<h2>Payload convergence<span class="hint">SHA-256 of each tracked file, computed in your browser from raw data — canary is the reference</span></h2>
+<div class="tablewrap"><table id="matrix">
+  <thead><tr id="matrix-head"><th>tracked file</th></tr></thead>
+  <tbody id="matrix-body"></tbody>
+</table></div>
+
+<h2>Static API<span class="hint">the repo is the API — rapp-static-api/1.0</span></h2>
+<dl class="ep">
+  <dt>index</dt><dd><a href="https://raw.githubusercontent.com/kody-w/rapp-release-train/main/registry.json">registry.json</a></dd>
+  <dt>status</dt><dd><a href="https://raw.githubusercontent.com/kody-w/rapp-release-train/main/api/v1/status.json">api/v1/status.json</a></dd>
+  <dt>badge</dt><dd><a href="https://raw.githubusercontent.com/kody-w/rapp-release-train/main/api/v1/badge.json">api/v1/badge.json</a></dd>
+  <dt>input</dt><dd><a href="https://raw.githubusercontent.com/kody-w/rapp-release-train/main/manifest.json">manifest.json</a></dd>
+  <dt>pinned versions</dt><dd>content-addressed frames under <code>versions/&lt;name&gt;/&lt;sha8&gt;</code> — immutable, append-only</dd>
+</dl>
+<pre>RAW=https://raw.githubusercontent.com/kody-w/rapp-release-train/main
+curl -s $RAW/api/v1/status.json | jq .   <b># is the train converged?</b></pre>
+
+<footer>
+  Operations doc: the canary repo's <a href="https://github.com/kody-w/rapp-canary/blob/main/.ring/RUNBOOK.md">.ring/RUNBOOK.md</a> (the five verbs).
+  Qualification: <a href="https://github.com/kody-w/rapp-canary/actions/workflows/test-pre-grail-rings.yml">Test Pre-Grail Rings</a> ·
+  evidence archived under <a href="https://github.com/kody-w/rapp-canary/tree/main/.ring/attestations">.ring/attestations</a>.
+  MIT © Kody Wildfeuer — part of the <a href="https://github.com/kody-w/rapp-map">RAPP ecosystem</a>.
+</footer>
+</main>
+
+<script>
+const RINGS = [
+  { name: "canary",  repo: "kody-w/rapp-canary",    role: "everything enters here" },
+  { name: "nightly", repo: "kody-w/rapp-nightly",   role: "first promotion" },
+  { name: "alpha",   repo: "kody-w/rapp-alpha",     role: "second promotion" },
+  { name: "beta",    repo: "kody-w/rapp-beta",      role: "release candidate" },
+  { name: "grail",   repo: "kody-w/rapp-installer", role: "production · human-only merge" },
+];
+const TRACKED = ["rapp_brainstem/VERSION", "install.sh", "release-notes.html"];
+const rawUrl = (repo, path) => `https://raw.githubusercontent.com/${repo}/main/${path}`;
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+
+async function fetchText(url) {
+  try { const r = await fetch(url, { cache: "no-store" }); return r.ok ? r.text() : null; } catch { return null; }
+}
+async function fetchJson(url) {
+  const t = await fetchText(url); try { return t ? JSON.parse(t) : null; } catch { return null; }
+}
+async function sha256hex(text) {
+  const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+/* ---- train rail ---- */
+async function buildRail() {
+  const rail = document.getElementById("rail");
+  for (let i = 0; i < RINGS.length; i++) {
+    const r = RINGS[i];
+    if (i > 0) rail.appendChild(el("div", "arrow" + (r.name === "grail" ? " human" : ""),
+      r.name === "grail" ? "⛔<br>human<br>gate" : "→"));
+    const stop = el("div", "stop" + (r.name === "grail" ? " grail" : ""));
+    stop.appendChild(el("div", null, `<a class="name" href="https://github.com/${r.repo}">${r.name}</a>`));
+    const ver = el("div", "ver", "…");
+    stop.appendChild(ver);
+    stop.appendChild(el("div", "role", r.role));
+    rail.appendChild(stop);
+    fetchText(rawUrl(r.repo, "rapp_brainstem/VERSION")).then(v => { ver.textContent = v ? "v" + v.trim() : "unreachable"; });
+  }
+}
+
+/* ---- ring cards ---- */
+async function buildCards() {
+  const cards = document.getElementById("cards");
+  for (const r of RINGS) {
+    const card = el("div", "card");
+    const badge = `<img alt="${r.name} preflight status on main" src="https://github.com/${r.repo}/actions/workflows/preflight.yml/badge.svg?branch=main">`;
+    card.appendChild(el("h3", null, `${esc(r.name)} ${badge}`));
+    card.appendChild(el("div", "repo", `<a href="https://github.com/${r.repo}">${r.repo}</a> — ${esc(r.role)}`));
+    const kv = el("dl", "kv");
+    card.appendChild(kv);
+    const put = (k, v) => { kv.appendChild(el("dt", null, esc(k))); kv.appendChild(el("dd", null, v)); };
+    const links = el("div", "links");
+    links.append(
+      el("a", null, "repo"), el("a", null, "actions"), el("a", null, "commits"), el("a", null, "release notes"),
+    );
+    const [aRepo, aAct, aCom, aNotes] = links.children;
+    aRepo.href = `https://github.com/${r.repo}`;
+    aAct.href = `https://github.com/${r.repo}/actions`;
+    aCom.href = `https://github.com/${r.repo}/commits/main`;
+    aNotes.href = rawUrl(r.repo, "release-notes.html");
+    card.appendChild(links);
+    cards.appendChild(card);
+
+    fetchText(rawUrl(r.repo, "rapp_brainstem/VERSION")).then(v => put("version", v ? esc(v.trim()) : "?"));
+    if (r.name !== "grail") {
+      fetchJson(rawUrl(r.repo, ".ring/ring.json")).then(j => {
+        if (!j) return;
+        put("parent ring", esc(j.parent ?? "— (head of train)"));
+        put("pages", `<a href="${esc(j.pages_url)}">${esc(j.pages_url.replace("https://",""))}</a>`);
+        if (j.rewrites) put("rewrite oracle", esc(j.rewrites.map(w => w.expected_count).join(" / ")) + " expected");
+      });
+    } else {
+      put("merge policy", "human_merge_required");
+      put("pages", `<a href="https://kody-w.github.io/rapp-installer">kody-w.github.io/rapp-installer</a>`);
+    }
+    // progressive enhancement: latest commit via the GitHub API (fails silently if rate-limited)
+    fetchJson(`https://api.github.com/repos/${r.repo}/commits/main`).then(j => {
+      if (!j || !j.sha) return;
+      put("main @", `<a href="https://github.com/${r.repo}/commit/${j.sha}">${j.sha.slice(0, 12)}</a>`);
+      const c = j.commit;
+      if (c?.committer?.date) put("last commit", esc(new Date(c.committer.date).toUTCString().replace(" GMT", " UTC")));
+      if (c?.message) put("subject", esc(c.message.split("\n")[0]));
+    });
+  }
+}
+
+/* ---- convergence matrix ---- */
+async function buildMatrix() {
+  const head = document.getElementById("matrix-head");
+  RINGS.forEach(r => head.appendChild(el("th", null, esc(r.name))));
+  const body = document.getElementById("matrix-body");
+  for (const path of TRACKED) {
+    const tr = el("tr");
+    tr.appendChild(el("td", "file", esc(path)));
+    const cells = RINGS.map(() => { const td = el("td", null, "…"); tr.appendChild(td); return td; });
+    body.appendChild(tr);
+    Promise.all(RINGS.map(r => fetchText(rawUrl(r.repo, path)))).then(async texts => {
+      const hashes = await Promise.all(texts.map(t => (t === null ? null : sha256hex(t))));
+      const ref = hashes[0]; // canary — head of the train
+      hashes.forEach((h, i) => {
+        const isGrail = RINGS[i].name === "grail";
+        if (h === null) { cells[i].innerHTML = `<span class="pill"><span class="dot"></span>unreachable</span>`; return; }
+        const sha = `<div class="sha">${h.slice(0, 12)}</div>`;
+        if (h === ref) cells[i].innerHTML = `<span class="pill good"><span class="dot"></span>✓ in sync</span>${sha}`;
+        else if (isGrail) cells[i].innerHTML = `<span class="pill pending"><span class="dot"></span>⧗ release pending</span>${sha}`;
+        else cells[i].innerHTML = `<span class="pill warn"><span class="dot"></span>▲ diverged</span>${sha}`;
+      });
+    });
+  }
+}
+
+/* ---- registry freshness ---- */
+fetchJson("registry.json").then(j => {
+  const s = document.getElementById("reg-updated");
+  if (j?.generated) s.textContent = `index rebuilt ${j.generated} · ${j.summary.entries} entries · ${j.summary.versions} captured versions`;
+  else s.textContent = "index not built yet";
+});
+
+buildRail(); buildCards(); buildMatrix();
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "schema": "rapp-static-api/1.0",
+  "name": "rapp-release-train",
+  "raw_base": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main",
+  "entries": [
+    {
+      "name": "rapp_brainstem/VERSION",
+      "sources": [
+        { "label": "canary",  "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/rapp_brainstem/VERSION" },
+        { "label": "nightly", "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/rapp_brainstem/VERSION" },
+        { "label": "alpha",   "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/rapp_brainstem/VERSION" },
+        { "label": "beta",    "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/rapp_brainstem/VERSION" },
+        { "label": "grail",   "url": "https://raw.githubusercontent.com/kody-w/rapp-installer/main/rapp_brainstem/VERSION" }
+      ]
+    },
+    {
+      "name": "install.sh",
+      "sources": [
+        { "label": "canary",  "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/install.sh" },
+        { "label": "nightly", "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/install.sh" },
+        { "label": "alpha",   "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/install.sh" },
+        { "label": "beta",    "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/install.sh" },
+        { "label": "grail",   "url": "https://raw.githubusercontent.com/kody-w/rapp-installer/main/install.sh" }
+      ]
+    },
+    {
+      "name": "release-notes.html",
+      "sources": [
+        { "label": "canary",  "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/release-notes.html" },
+        { "label": "nightly", "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/release-notes.html" },
+        { "label": "alpha",   "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/release-notes.html" },
+        { "label": "beta",    "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/release-notes.html" },
+        { "label": "grail",   "url": "https://raw.githubusercontent.com/kody-w/rapp-installer/main/release-notes.html" }
+      ]
+    },
+    {
+      "name": "train/train.json",
+      "sources": [
+        { "label": "canary", "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/.ring/train.json" }
+      ]
+    },
+    {
+      "name": "rings/canary.json",
+      "sources": [
+        { "label": "canary", "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/.ring/ring.json" }
+      ]
+    },
+    {
+      "name": "rings/nightly.json",
+      "sources": [
+        { "label": "nightly", "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/.ring/ring.json" }
+      ]
+    },
+    {
+      "name": "rings/alpha.json",
+      "sources": [
+        { "label": "alpha", "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/.ring/ring.json" }
+      ]
+    },
+    {
+      "name": "rings/beta.json",
+      "sources": [
+        { "label": "beta", "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/.ring/ring.json" }
+      ]
+    }
+  ]
+}
