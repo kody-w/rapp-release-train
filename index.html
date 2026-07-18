@@ -181,7 +181,8 @@ async function buildCards() {
   const cards = document.getElementById("cards");
   for (const r of RINGS) {
     const card = el("div", "card");
-    const badge = `<img alt="${r.name} preflight status on main" src="https://github.com/${r.repo}/actions/workflows/preflight.yml/badge.svg?branch=main">`;
+    // grail's preflight runs on release branches, never on main pushes — no branch filter there
+    const badge = `<img alt="${r.name} preflight status" src="https://github.com/${r.repo}/actions/workflows/preflight.yml/badge.svg${r.name === "grail" ? "" : "?branch=main"}">`;
     card.appendChild(el("h3", null, `${esc(r.name)} ${badge}`));
     card.appendChild(el("div", "repo", `<a href="https://github.com/${r.repo}">${r.repo}</a> — ${esc(r.role)}`));
     const kv = el("dl", "kv");
