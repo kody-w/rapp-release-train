@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T11:29:12Z",
+  "generated": "2026-08-28T22:25:12Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -22,11 +22,11 @@
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-07-25T17:16:19Z"
+          "date": "2026-08-28T19:30:38Z"
         },
-        "message": "merge: feat/cartridge-ref \u2014 any .egg travels embedded or referenced\n\nPreflight green on the branch before merge, per .ring/RUNBOOK.md. Zero kernel\nchange. Enters at canary; promotion and the grail gate remain Kody's.\n\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+        "message": "Merge pull request #6 from kody-w/fix/installer-silent-steps\n\ninstaller: never look hung \u2014 visible winget/venv/pip steps, capped pip retries"
       },
-      "sha": "b9a225310087fb61a59dae6fce792a33b719618b"
+      "sha": "1bd8f39cd5ff8a1de0cd4a0f5720cea00853e6cd"
     },
     "kody-w/rapp-installer": {
       "commit": {

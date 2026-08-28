@@ -1,10 +1,10 @@
 {
   "schema": "rapp-static-api-status/1.0",
-  "generated": "2026-07-18T19:34:56Z",
+  "generated": "2026-08-28T22:25:09Z",
   "summary": {
     "entries": 8,
     "drift": 2,
-    "versions": 10
+    "versions": 11
   },
   "entries": [
     {
@@ -16,8 +16,8 @@
     {
       "name": "install.sh",
       "drift": true,
-      "primary_sha8": "993d070acf7d",
-      "versions": 2
+      "primary_sha8": "4bc9d83914bb",
+      "versions": 3
     },
     {
       "name": "release-notes.html",
