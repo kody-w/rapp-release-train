@@ -18,9 +18,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 build.py
+      # Article XXIV: keep the ring-commit sidecar fresh so index.html never
+      # calls api.github.com from the browser. GITHUB_TOKEN gives a higher
+      # rate limit for the 5 calls this makes.
+      - run: python3 scripts/build_ring_commits.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit only real changes
         run: |
           git config user.name "static-api"
           git config user.email "actions@users.noreply.github.com"
-          git add -A versions registry.json api
+          git add -A versions registry.json api state/ring_commits.json
           git diff --cached --quiet || { git commit -m "static-api: rebuild [skip ci]"; git push; }

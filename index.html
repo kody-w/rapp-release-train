@@ -177,6 +177,10 @@ async function buildRail() {
 }
 
 /* ---- ring cards ---- */
+// CI-harvested snapshot of each ring's latest main-branch commit (Article XXIV —
+// static data, not the GitHub API). Fetched once and shared across cards.
+const ringCommits = fetchJson("state/ring_commits.json");
+
 async function buildCards() {
   const cards = document.getElementById("cards");
   for (const r of RINGS) {
@@ -212,8 +216,10 @@ async function buildCards() {
       put("merge policy", "human_merge_required");
       put("pages", `<a href="https://kody-w.github.io/rapp-installer">kody-w.github.io/rapp-installer</a>`);
     }
-    // progressive enhancement: latest commit via the GitHub API (fails silently if rate-limited)
-    fetchJson(`https://api.github.com/repos/${r.repo}/commits/main`).then(j => {
+    // progressive enhancement: latest commit from the CI-harvested static snapshot
+    // (Article XXIV — never api.github.com from the browser; see scripts/build_ring_commits.py)
+    ringCommits.then(all => {
+      const j = all?.repos?.[r.repo];
       if (!j || !j.sha) return;
       put("main @", `<a href="https://github.com/${r.repo}/commit/${j.sha}">${j.sha.slice(0, 12)}</a>`);
       const c = j.commit;
