@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T03:03:04Z",
+  "generated": "2026-08-28T11:29:12Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -31,11 +31,11 @@
     "kody-w/rapp-installer": {
       "commit": {
         "committer": {
-          "date": "2026-08-28T01:10:02Z"
+          "date": "2026-08-28T04:35:43Z"
         },
-        "message": "Merge pull request #45 from kody-w/copilot/brainstem-scout-callback\n\nAdd rapp@brainstem marketplace"
+        "message": "Merge pull request #46 from kody-w/copilot/rapp-at-x-article-xxv\n\nFollow RAR marketplace Article XXV"
       },
-      "sha": "4817c876cf16c77dbf93a13d10e9d9ebcbb2ee27"
+      "sha": "49db80c8c6b6caa7647369beaf477d374a8f293c"
     },
     "kody-w/rapp-nightly": {
       "commit": {
