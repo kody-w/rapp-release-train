@@ -1,32 +1,32 @@
 {
-  "generated": "2026-08-29T16:45:56Z",
+  "generated": "2026-08-29T20:57:59Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
         "committer": {
-          "date": "2026-07-18T19:55:20Z"
+          "date": "2026-08-29T20:30:30Z"
         },
-        "message": "promote: nightly -> alpha (tutorial six-steps + shape-finding fixes)\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+        "message": "promote: nightly -> alpha (BACKPORT auth preflight assertion)\n\nSource: 9bcef6fe91d1c07d936c830cd101a316bba552ad\nNightly CI: https://github.com/kody-w/rapp-nightly/actions/runs/33273568721\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "6b81273d8e5aa1805ab5e6b5ff1709c4136ea1d8"
+      "sha": "e2010c25096e5b00a749895db43478a88e65a151"
     },
     "kody-w/rapp-beta": {
       "commit": {
         "committer": {
-          "date": "2026-07-18T19:55:25Z"
+          "date": "2026-08-29T20:33:16Z"
         },
-        "message": "promote: alpha -> beta (tutorial six-steps + shape-finding fixes)\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+        "message": "promote: alpha -> beta (BACKPORT auth preflight assertion)\n\nSource: e2010c25096e6209185a6ad8dc6c0f7bc71e4835\nAlpha CI: https://github.com/kody-w/rapp-alpha/actions/runs/33273668052\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "6d7604a1349d8e8272f9193b266cff43d8918a36"
+      "sha": "6f0d2871cfc2bb80661632645141d25b473df00c"
     },
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-08-28T19:30:38Z"
+          "date": "2026-08-29T20:27:25Z"
         },
-        "message": "Merge pull request #6 from kody-w/fix/installer-silent-steps\n\ninstaller: never look hung \u2014 visible winget/venv/pip steps, capped pip retries"
+        "message": "merge: correct authenticated preflight assertions\n\nBranch CI: https://github.com/kody-w/rapp-canary/actions/runs/33273415607\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 4)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\n\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "1bd8f39cd5ff8a1de0cd4a0f5720cea00853e6cd"
+      "sha": "92d89f258ff5fa83970935be0389b426d3789f2f"
     },
     "kody-w/rapp-installer": {
       "commit": {
@@ -40,11 +40,11 @@
     "kody-w/rapp-nightly": {
       "commit": {
         "committer": {
-          "date": "2026-07-18T19:55:15Z"
+          "date": "2026-08-29T20:28:05Z"
         },
-        "message": "promote: canary -> nightly (tutorial six-steps + shape-finding fixes)\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+        "message": "promote: canary -> nightly (BACKPORT auth preflight assertion)\n\nSource: 670403024ad8ef442b7dd8bd8cb10d86c36139e2\nCanary hotfix CI: https://github.com/kody-w/rapp-canary/actions/runs/33273415369\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "4410a1c8062f2faa3e045fca84a607c961ff3a9e"
+      "sha": "9bcef6fe91d1bef2098ffb990ed1ee4de7c35247"
     }
   },
   "schema": "rapp-release-train-ring-commits/1"
