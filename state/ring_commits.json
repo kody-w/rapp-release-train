@@ -1,32 +1,32 @@
 {
-  "generated": "2026-08-29T20:57:59Z",
+  "generated": "2026-08-30T05:29:32Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T20:30:30Z"
+          "date": "2026-08-29T21:29:32Z"
         },
-        "message": "promote: nightly -> alpha (BACKPORT auth preflight assertion)\n\nSource: 9bcef6fe91d1c07d936c830cd101a316bba552ad\nNightly CI: https://github.com/kody-w/rapp-nightly/actions/runs/33273568721\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "promote: nightly -> alpha\n\nPromote the Nightly-qualified shared payload through commit 125e733 after successful main preflight.\n\nNightly preflight: https://github.com/kody-w/rapp-nightly/actions/runs/33276081975\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
       },
-      "sha": "e2010c25096e5b00a749895db43478a88e65a151"
+      "sha": "8c9964aed07501ce64831469b2098c33a20e4763"
     },
     "kody-w/rapp-beta": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T20:33:16Z"
+          "date": "2026-08-29T21:33:33Z"
         },
-        "message": "promote: alpha -> beta (BACKPORT auth preflight assertion)\n\nSource: e2010c25096e6209185a6ad8dc6c0f7bc71e4835\nAlpha CI: https://github.com/kody-w/rapp-alpha/actions/runs/33273668052\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "promote: alpha -> beta\n\nPromote the Alpha-qualified shared payload through commit 8c9964a after successful main preflight.\n\nAlpha preflight: https://github.com/kody-w/rapp-alpha/actions/runs/33276202381\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
       },
-      "sha": "6f0d2871cfc2bb80661632645141d25b473df00c"
+      "sha": "42c7e405bcf241c147a495343dc5d0132e9c0929"
     },
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T20:27:25Z"
+          "date": "2026-08-29T21:38:42Z"
         },
-        "message": "merge: correct authenticated preflight assertions\n\nBranch CI: https://github.com/kody-w/rapp-canary/actions/runs/33273415607\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 4)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\n\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "evidence: archive pre-grail qualification 33276538298\n\nArchive the successful Canary, Nightly, Alpha, and Beta qualification artifacts for the TwinSubstrate promotion sweep.\n\nQualification: https://github.com/kody-w/rapp-canary/actions/runs/33276538298\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
       },
-      "sha": "92d89f258ff5fa83970935be0389b426d3789f2f"
+      "sha": "426f7e19507fa269950746931e3ee41f2a5e78a1"
     },
     "kody-w/rapp-installer": {
       "commit": {
@@ -40,11 +40,11 @@
     "kody-w/rapp-nightly": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T20:28:05Z"
+          "date": "2026-08-29T21:26:25Z"
         },
-        "message": "promote: canary -> nightly (BACKPORT auth preflight assertion)\n\nSource: 670403024ad8ef442b7dd8bd8cb10d86c36139e2\nCanary hotfix CI: https://github.com/kody-w/rapp-canary/actions/runs/33273415369\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "promote: canary -> nightly\n\nPromote shared payload through Canary commit 81e8af2e137f880d1f64efe3603834cdb3f086f8 after successful main preflight.\n\nCanary preflight: https://github.com/kody-w/rapp-canary/actions/runs/33275930497\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
       },
-      "sha": "9bcef6fe91d1bef2098ffb990ed1ee4de7c35247"
+      "sha": "125e733077892562943fab950e5dede51e6613da"
     }
   },
   "schema": "rapp-release-train-ring-commits/1"
