@@ -1,10 +1,10 @@
 {
   "schema": "rapp-static-api-status/1.0",
-  "generated": "2026-08-30T11:58:50Z",
+  "generated": "2026-08-30T16:44:48Z",
   "summary": {
     "entries": 8,
-    "drift": 2,
-    "versions": 14
+    "drift": 0,
+    "versions": 19
   },
   "entries": [
     {
@@ -15,45 +15,45 @@
     },
     {
       "name": "install.sh",
-      "drift": true,
-      "primary_sha8": "931dda8bd6f2",
+      "drift": false,
+      "primary_sha8": "cc586dd17525",
       "versions": 5
     },
     {
       "name": "release-notes.html",
-      "drift": true,
-      "primary_sha8": "ee34c37e5bc3",
+      "drift": false,
+      "primary_sha8": "47a8f463a72d",
       "versions": 2
     },
     {
       "name": "train/train.json",
       "drift": false,
-      "primary_sha8": "0285d7b63a8a",
-      "versions": 2
+      "primary_sha8": "a5f9a44d5545",
+      "versions": 3
     },
     {
       "name": "rings/canary.json",
       "drift": false,
-      "primary_sha8": "b05ac6e647fe",
-      "versions": 1
+      "primary_sha8": "ad5a8ace70ce",
+      "versions": 2
     },
     {
       "name": "rings/nightly.json",
       "drift": false,
-      "primary_sha8": "41b5ab08f1b0",
-      "versions": 1
+      "primary_sha8": "b96bac3e205a",
+      "versions": 2
     },
     {
       "name": "rings/alpha.json",
       "drift": false,
-      "primary_sha8": "47dd4fecce1d",
-      "versions": 1
+      "primary_sha8": "b16eab3e11e3",
+      "versions": 2
     },
     {
       "name": "rings/beta.json",
       "drift": false,
-      "primary_sha8": "78b41db103af",
-      "versions": 1
+      "primary_sha8": "1d26a5d7d25d",
+      "versions": 2
     }
   ]
 }

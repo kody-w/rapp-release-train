@@ -1,32 +1,32 @@
 {
-  "generated": "2026-08-30T11:58:57Z",
+  "generated": "2026-08-30T16:44:54Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T21:29:32Z"
+          "date": "2026-08-30T12:30:23Z"
         },
-        "message": "promote: nightly -> alpha\n\nPromote the Nightly-qualified shared payload through commit 125e733 after successful main preflight.\n\nNightly preflight: https://github.com/kody-w/rapp-nightly/actions/runs/33276081975\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+        "message": "reseed: restore production baseline\n\nReset the Alpha shared payload to exact Grail main bytes; preserve the prior tip at archive/pre-pristine-20260830.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "8c9964aed07501ce64831469b2098c33a20e4763"
+      "sha": "6d81fdab3814097ba42dd40bbd923bbc1d5ea32e"
     },
     "kody-w/rapp-beta": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T21:33:33Z"
+          "date": "2026-08-30T12:30:26Z"
         },
-        "message": "promote: alpha -> beta\n\nPromote the Alpha-qualified shared payload through commit 8c9964a after successful main preflight.\n\nAlpha preflight: https://github.com/kody-w/rapp-alpha/actions/runs/33276202381\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+        "message": "reseed: restore production baseline\n\nReset the Beta shared payload to exact Grail main bytes; preserve the prior tip at archive/pre-pristine-20260830.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "42c7e405bcf241c147a495343dc5d0132e9c0929"
+      "sha": "b7f43591a728fe6b0d9f0bda46046817d4f6f098"
     },
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-08-30T05:31:49Z"
+          "date": "2026-08-30T12:44:58Z"
         },
-        "message": "ops: establish constitutional Preprod seaworthiness\n\nAdd the protected Preprod control plane and enforce RAPP/1 rev-10 Article 15: the Grail Brainstem is immutable and every ring/release stage fails closed on kernel drift.\n\nThe standard preflight is green. The Autonomous Pre-Grail Matrix is intentionally red because current ring Brainstem bytes differ from the constitutional v0.6.16 Grail pin; this merge installs the guard that exposes and blocks that condition.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "reseed: production runway plus one Canary test\n\nRestore the full shared payload to exact production bytes, preserve all prior work at feature/post-grail-changes, and leave one shared Canary delta: the immutable Grail SHA-256 test.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "702ec5cff4181cf8e7964f301dd4b60d6efd3f4d"
+      "sha": "62ba2ee8efa2d44f6ed32c017f28be926027a57e"
     },
     "kody-w/rapp-installer": {
       "commit": {
@@ -40,11 +40,11 @@
     "kody-w/rapp-nightly": {
       "commit": {
         "committer": {
-          "date": "2026-08-29T21:26:25Z"
+          "date": "2026-08-30T12:30:21Z"
         },
-        "message": "promote: canary -> nightly\n\nPromote shared payload through Canary commit 81e8af2e137f880d1f64efe3603834cdb3f086f8 after successful main preflight.\n\nCanary preflight: https://github.com/kody-w/rapp-canary/actions/runs/33275930497\n\nReviewed-by: Copilot CLI GPT-5.6 Sol (agreed round 12)\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+        "message": "reseed: restore production baseline\n\nReset the Nightly shared payload to exact Grail main bytes; preserve the prior tip at archive/pre-pristine-20260830.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
       },
-      "sha": "125e733077892562943fab950e5dede51e6613da"
+      "sha": "0b68d80c3ec9e0d869aa334bb05dd1c9fabace69"
     }
   },
   "schema": "rapp-release-train-ring-commits/1"
