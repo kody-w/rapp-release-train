@@ -1,12 +1,12 @@
 {
   "schema": "rapp-static-api/1.0",
   "name": "rapp-release-train",
-  "generated": "2026-08-30T05:29:26Z",
+  "generated": "2026-08-30T11:58:50Z",
   "raw_base": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main",
   "summary": {
     "entries": 8,
     "drift": 2,
-    "versions": 13
+    "versions": 14
   },
   "entries": [
     {
@@ -242,14 +242,14 @@
     {
       "name": "train/train.json",
       "ext": ".json",
-      "primary_sha8": "ba8fd00dfde6",
+      "primary_sha8": "0285d7b63a8a",
       "drift": false,
-      "version_count": 1,
+      "version_count": 2,
       "sources": [
         {
           "label": "canary",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/.ring/train.json",
-          "sha8": "ba8fd00dfde6",
+          "sha8": "0285d7b63a8a",
           "on_primary": true,
           "reachable": true
         }
@@ -262,6 +262,15 @@
           "path": "versions/train/train.json/ba8fd00dfde6.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/train/train.json/ba8fd00dfde6.json",
           "first_captured": "2026-07-18T02:45:13Z",
+          "carried_by": []
+        },
+        {
+          "sha": "0285d7b63a8ad21ccc724b83a278b3fd068024caf0b4d51b19d0cef75dda4a7e",
+          "sha8": "0285d7b63a8a",
+          "bytes": 1330,
+          "path": "versions/train/train.json/0285d7b63a8a.json",
+          "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/train/train.json/0285d7b63a8a.json",
+          "first_captured": "2026-08-30T11:58:50Z",
           "carried_by": [
             "canary"
           ]
