@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T12:41:54Z",
+  "generated": "2026-09-07T21:33:52Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -22,11 +22,11 @@
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-09-06T20:38:01Z"
+          "date": "2026-09-07T19:14:47Z"
         },
-        "message": "release(canary): publish agent-led onboarding only\n\nPreserve prior Canary work, re-seed the shared payload from production, and publish only the approved five-file onboarding layer. Include the explicitly approved ring-owned matrix repair without changing installer or Brainstem runtime bytes. No downstream or production promotion.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 03b13af4-cc91-4e8a-bc90-27c534c44333"
+        "message": "Merge published Canary skill and safe setup-only flight support\n\nPreflight passed: https://github.com/kody-w/rapp-canary/actions/runs/34154245670\nRing checks passed: https://github.com/kody-w/rapp-canary/actions/runs/34154245728\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
       },
-      "sha": "ddfdddc9adea874c02a0a9bd3a99485e90d484e3"
+      "sha": "3ada5f6e75533f88e92d548a13942ca19ad1dc79"
     },
     "kody-w/rapp-installer": {
       "commit": {
