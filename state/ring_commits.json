@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T20:28:06Z",
+  "generated": "2026-09-07T04:49:01Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -22,11 +22,11 @@
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-08-30T12:44:58Z"
+          "date": "2026-09-06T20:38:01Z"
         },
-        "message": "reseed: production runway plus one Canary test\n\nRestore the full shared payload to exact production bytes, preserve all prior work at feature/post-grail-changes, and leave one shared Canary delta: the immutable Grail SHA-256 test.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 690f70cf-c834-40ff-b050-37382ea46b0d"
+        "message": "release(canary): publish agent-led onboarding only\n\nPreserve prior Canary work, re-seed the shared payload from production, and publish only the approved five-file onboarding layer. Include the explicitly approved ring-owned matrix repair without changing installer or Brainstem runtime bytes. No downstream or production promotion.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\nCopilot-Session: 03b13af4-cc91-4e8a-bc90-27c534c44333"
       },
-      "sha": "62ba2ee8efa2d44f6ed32c017f28be926027a57e"
+      "sha": "ddfdddc9adea874c02a0a9bd3a99485e90d484e3"
     },
     "kody-w/rapp-installer": {
       "commit": {

@@ -1,10 +1,10 @@
 {
   "schema": "rapp-static-api-status/1.0",
-  "generated": "2026-08-30T16:44:48Z",
+  "generated": "2026-09-07T04:48:57Z",
   "summary": {
     "entries": 8,
     "drift": 0,
-    "versions": 19
+    "versions": 20
   },
   "entries": [
     {
@@ -34,8 +34,8 @@
     {
       "name": "rings/canary.json",
       "drift": false,
-      "primary_sha8": "ad5a8ace70ce",
-      "versions": 2
+      "primary_sha8": "0f491deef334",
+      "versions": 3
     },
     {
       "name": "rings/nightly.json",

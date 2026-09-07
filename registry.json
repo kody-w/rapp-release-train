@@ -1,12 +1,12 @@
 {
   "schema": "rapp-static-api/1.0",
   "name": "rapp-release-train",
-  "generated": "2026-08-30T16:44:48Z",
+  "generated": "2026-09-07T04:48:57Z",
   "raw_base": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main",
   "summary": {
     "entries": 8,
     "drift": 0,
-    "versions": 19
+    "versions": 20
   },
   "entries": [
     {
@@ -287,14 +287,14 @@
     {
       "name": "rings/canary.json",
       "ext": ".json",
-      "primary_sha8": "ad5a8ace70ce",
+      "primary_sha8": "0f491deef334",
       "drift": false,
-      "version_count": 2,
+      "version_count": 3,
       "sources": [
         {
           "label": "canary",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/.ring/ring.json",
-          "sha8": "ad5a8ace70ce",
+          "sha8": "0f491deef334",
           "on_primary": true,
           "reachable": true
         }
@@ -316,6 +316,15 @@
           "path": "versions/rings/canary.json/ad5a8ace70ce.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/canary.json/ad5a8ace70ce.json",
           "first_captured": "2026-08-30T16:44:48Z",
+          "carried_by": []
+        },
+        {
+          "sha": "0f491deef334ee1db2ad43d388e80bd61de8bb0b2e5622950e6544356847833b",
+          "sha8": "0f491deef334",
+          "bytes": 757,
+          "path": "versions/rings/canary.json/0f491deef334.json",
+          "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/canary.json/0f491deef334.json",
+          "first_captured": "2026-09-07T04:48:57Z",
           "carried_by": [
             "canary"
           ]
