@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T21:33:52Z",
+  "generated": "2026-09-08T04:44:52Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -22,11 +22,11 @@
     "kody-w/rapp-canary": {
       "commit": {
         "committer": {
-          "date": "2026-09-07T19:14:47Z"
+          "date": "2026-09-07T22:48:10Z"
         },
-        "message": "Merge published Canary skill and safe setup-only flight support\n\nPreflight passed: https://github.com/kody-w/rapp-canary/actions/runs/34154245670\nRing checks passed: https://github.com/kody-w/rapp-canary/actions/runs/34154245728\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+        "message": "merge: replace LearnNew with stable aibast agent, drop skills entirely (preflight green: run 34167731544)"
       },
-      "sha": "3ada5f6e75533f88e92d548a13942ca19ad1dc79"
+      "sha": "da91e66df702965d03a1ca6fa6d955d0d78d4ebd"
     },
     "kody-w/rapp-installer": {
       "commit": {
