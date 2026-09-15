@@ -1,7 +1,7 @@
 {
   "schema": "rapp-static-api/1.0",
   "name": "rapp-release-train",
-  "generated": "2026-09-14T05:03:36Z",
+  "generated": "2026-09-15T21:25:42Z",
   "raw_base": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main",
   "summary": {
     "entries": 8,
@@ -12,14 +12,14 @@
     {
       "name": "rapp_brainstem/VERSION",
       "ext": "",
-      "primary_sha8": "910c4d961120",
+      "primary_sha8": "e94a7f87af28",
       "drift": true,
       "version_count": 2,
       "sources": [
         {
           "label": "canary",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/rapp_brainstem/VERSION",
-          "sha8": "910c4d961120",
+          "sha8": "e94a7f87af28",
           "on_primary": true,
           "reachable": true
         },
@@ -27,28 +27,28 @@
           "label": "nightly",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/rapp_brainstem/VERSION",
           "sha8": "910c4d961120",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "alpha",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/rapp_brainstem/VERSION",
           "sha8": "910c4d961120",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "beta",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/rapp_brainstem/VERSION",
           "sha8": "910c4d961120",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "grail",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-installer/main/rapp_brainstem/VERSION",
           "sha8": "e94a7f87af28",
-          "on_primary": false,
+          "on_primary": true,
           "reachable": true
         }
       ],
@@ -61,6 +61,7 @@
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rapp_brainstem/VERSION/e94a7f87af28",
           "first_captured": "2026-07-18T02:45:13Z",
           "carried_by": [
+            "canary",
             "grail"
           ]
         },
@@ -72,7 +73,6 @@
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rapp_brainstem/VERSION/910c4d961120",
           "first_captured": "2026-09-14T05:03:36Z",
           "carried_by": [
-            "canary",
             "nightly",
             "alpha",
             "beta"
@@ -83,14 +83,14 @@
     {
       "name": "install.sh",
       "ext": ".sh",
-      "primary_sha8": "dc22a7c2fc92",
+      "primary_sha8": "cc586dd17525",
       "drift": true,
       "version_count": 6,
       "sources": [
         {
           "label": "canary",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/install.sh",
-          "sha8": "dc22a7c2fc92",
+          "sha8": "cc586dd17525",
           "on_primary": true,
           "reachable": true
         },
@@ -98,28 +98,28 @@
           "label": "nightly",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/install.sh",
           "sha8": "dc22a7c2fc92",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "alpha",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/install.sh",
           "sha8": "dc22a7c2fc92",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "beta",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/install.sh",
           "sha8": "dc22a7c2fc92",
-          "on_primary": true,
+          "on_primary": false,
           "reachable": true
         },
         {
           "label": "grail",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-installer/main/install.sh",
           "sha8": "cc586dd17525",
-          "on_primary": false,
+          "on_primary": true,
           "reachable": true
         }
       ],
@@ -132,6 +132,7 @@
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/install.sh/cc586dd17525.sh",
           "first_captured": "2026-07-18T02:45:13Z",
           "carried_by": [
+            "canary",
             "grail"
           ]
         },
@@ -179,7 +180,6 @@
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/install.sh/dc22a7c2fc92.sh",
           "first_captured": "2026-09-07T21:33:46Z",
           "carried_by": [
-            "canary",
             "nightly",
             "alpha",
             "beta"
