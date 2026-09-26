@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T16:28:16Z",
+  "generated": "2026-09-26T21:14:44Z",
   "repos": {
     "kody-w/rapp-alpha": {
       "commit": {
@@ -31,11 +31,11 @@
     "kody-w/rapp-installer": {
       "commit": {
         "committer": {
-          "date": "2026-08-28T04:35:43Z"
+          "date": "2026-09-26T21:11:13Z"
         },
-        "message": "Merge pull request #46 from kody-w/copilot/rapp-at-x-article-xxv\n\nFollow RAR marketplace Article XXV"
+        "message": "Merge pull request #50 from kody-w/night-shift/installer-38-preflight-identity\n\nfix: reject stale-server success in local preflight"
       },
-      "sha": "49db80c8c6b6caa7647369beaf477d374a8f293c"
+      "sha": "0e43ee580e78c150b1c59002456822d2e779388e"
     },
     "kody-w/rapp-nightly": {
       "commit": {
