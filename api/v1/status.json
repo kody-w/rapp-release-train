@@ -1,21 +1,21 @@
 {
   "schema": "rapp-static-api-status/1.0",
-  "generated": "2026-09-15T21:25:42Z",
+  "generated": "2026-09-27T21:24:25Z",
   "summary": {
     "entries": 8,
-    "drift": 2,
+    "drift": 0,
     "versions": 25
   },
   "entries": [
     {
       "name": "rapp_brainstem/VERSION",
-      "drift": true,
+      "drift": false,
       "primary_sha8": "e94a7f87af28",
       "versions": 2
     },
     {
       "name": "install.sh",
-      "drift": true,
+      "drift": false,
       "primary_sha8": "cc586dd17525",
       "versions": 6
     },
@@ -34,25 +34,25 @@
     {
       "name": "rings/canary.json",
       "drift": false,
-      "primary_sha8": "0f491deef334",
+      "primary_sha8": "ad5a8ace70ce",
       "versions": 3
     },
     {
       "name": "rings/nightly.json",
       "drift": false,
-      "primary_sha8": "cbd221e4ef8f",
+      "primary_sha8": "b96bac3e205a",
       "versions": 3
     },
     {
       "name": "rings/alpha.json",
       "drift": false,
-      "primary_sha8": "9adae4ae840f",
+      "primary_sha8": "b16eab3e11e3",
       "versions": 3
     },
     {
       "name": "rings/beta.json",
       "drift": false,
-      "primary_sha8": "663a4380facf",
+      "primary_sha8": "1d26a5d7d25d",
       "versions": 3
     }
   ]

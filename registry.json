@@ -1,11 +1,11 @@
 {
   "schema": "rapp-static-api/1.0",
   "name": "rapp-release-train",
-  "generated": "2026-09-15T21:25:42Z",
+  "generated": "2026-09-27T21:24:25Z",
   "raw_base": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main",
   "summary": {
     "entries": 8,
-    "drift": 2,
+    "drift": 0,
     "versions": 25
   },
   "entries": [
@@ -13,7 +13,7 @@
       "name": "rapp_brainstem/VERSION",
       "ext": "",
       "primary_sha8": "e94a7f87af28",
-      "drift": true,
+      "drift": false,
       "version_count": 2,
       "sources": [
         {
@@ -26,22 +26,22 @@
         {
           "label": "nightly",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/rapp_brainstem/VERSION",
-          "sha8": "910c4d961120",
-          "on_primary": false,
+          "sha8": "e94a7f87af28",
+          "on_primary": true,
           "reachable": true
         },
         {
           "label": "alpha",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/rapp_brainstem/VERSION",
-          "sha8": "910c4d961120",
-          "on_primary": false,
+          "sha8": "e94a7f87af28",
+          "on_primary": true,
           "reachable": true
         },
         {
           "label": "beta",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/rapp_brainstem/VERSION",
-          "sha8": "910c4d961120",
-          "on_primary": false,
+          "sha8": "e94a7f87af28",
+          "on_primary": true,
           "reachable": true
         },
         {
@@ -62,6 +62,9 @@
           "first_captured": "2026-07-18T02:45:13Z",
           "carried_by": [
             "canary",
+            "nightly",
+            "alpha",
+            "beta",
             "grail"
           ]
         },
@@ -72,11 +75,7 @@
           "path": "versions/rapp_brainstem/VERSION/910c4d961120",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rapp_brainstem/VERSION/910c4d961120",
           "first_captured": "2026-09-14T05:03:36Z",
-          "carried_by": [
-            "nightly",
-            "alpha",
-            "beta"
-          ]
+          "carried_by": []
         }
       ]
     },
@@ -84,7 +83,7 @@
       "name": "install.sh",
       "ext": ".sh",
       "primary_sha8": "cc586dd17525",
-      "drift": true,
+      "drift": false,
       "version_count": 6,
       "sources": [
         {
@@ -97,22 +96,22 @@
         {
           "label": "nightly",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/install.sh",
-          "sha8": "dc22a7c2fc92",
-          "on_primary": false,
+          "sha8": "cc586dd17525",
+          "on_primary": true,
           "reachable": true
         },
         {
           "label": "alpha",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/install.sh",
-          "sha8": "dc22a7c2fc92",
-          "on_primary": false,
+          "sha8": "cc586dd17525",
+          "on_primary": true,
           "reachable": true
         },
         {
           "label": "beta",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/install.sh",
-          "sha8": "dc22a7c2fc92",
-          "on_primary": false,
+          "sha8": "cc586dd17525",
+          "on_primary": true,
           "reachable": true
         },
         {
@@ -133,6 +132,9 @@
           "first_captured": "2026-07-18T02:45:13Z",
           "carried_by": [
             "canary",
+            "nightly",
+            "alpha",
+            "beta",
             "grail"
           ]
         },
@@ -179,11 +181,7 @@
           "path": "versions/install.sh/dc22a7c2fc92.sh",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/install.sh/dc22a7c2fc92.sh",
           "first_captured": "2026-09-07T21:33:46Z",
-          "carried_by": [
-            "nightly",
-            "alpha",
-            "beta"
-          ]
+          "carried_by": []
         }
       ]
     },
@@ -307,14 +305,14 @@
     {
       "name": "rings/canary.json",
       "ext": ".json",
-      "primary_sha8": "0f491deef334",
+      "primary_sha8": "ad5a8ace70ce",
       "drift": false,
       "version_count": 3,
       "sources": [
         {
           "label": "canary",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-canary/main/.ring/ring.json",
-          "sha8": "0f491deef334",
+          "sha8": "ad5a8ace70ce",
           "on_primary": true,
           "reachable": true
         }
@@ -336,7 +334,9 @@
           "path": "versions/rings/canary.json/ad5a8ace70ce.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/canary.json/ad5a8ace70ce.json",
           "first_captured": "2026-08-30T16:44:48Z",
-          "carried_by": []
+          "carried_by": [
+            "canary"
+          ]
         },
         {
           "sha": "0f491deef334ee1db2ad43d388e80bd61de8bb0b2e5622950e6544356847833b",
@@ -345,23 +345,21 @@
           "path": "versions/rings/canary.json/0f491deef334.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/canary.json/0f491deef334.json",
           "first_captured": "2026-09-07T04:48:57Z",
-          "carried_by": [
-            "canary"
-          ]
+          "carried_by": []
         }
       ]
     },
     {
       "name": "rings/nightly.json",
       "ext": ".json",
-      "primary_sha8": "cbd221e4ef8f",
+      "primary_sha8": "b96bac3e205a",
       "drift": false,
       "version_count": 3,
       "sources": [
         {
           "label": "nightly",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-nightly/main/.ring/ring.json",
-          "sha8": "cbd221e4ef8f",
+          "sha8": "b96bac3e205a",
           "on_primary": true,
           "reachable": true
         }
@@ -383,7 +381,9 @@
           "path": "versions/rings/nightly.json/b96bac3e205a.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/nightly.json/b96bac3e205a.json",
           "first_captured": "2026-08-30T16:44:48Z",
-          "carried_by": []
+          "carried_by": [
+            "nightly"
+          ]
         },
         {
           "sha": "cbd221e4ef8f47caa8b5bfc9db5cf8ad8e2dada0d2a443d9a1db43db32ecb04c",
@@ -392,23 +392,21 @@
           "path": "versions/rings/nightly.json/cbd221e4ef8f.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/nightly.json/cbd221e4ef8f.json",
           "first_captured": "2026-09-14T05:03:36Z",
-          "carried_by": [
-            "nightly"
-          ]
+          "carried_by": []
         }
       ]
     },
     {
       "name": "rings/alpha.json",
       "ext": ".json",
-      "primary_sha8": "9adae4ae840f",
+      "primary_sha8": "b16eab3e11e3",
       "drift": false,
       "version_count": 3,
       "sources": [
         {
           "label": "alpha",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-alpha/main/.ring/ring.json",
-          "sha8": "9adae4ae840f",
+          "sha8": "b16eab3e11e3",
           "on_primary": true,
           "reachable": true
         }
@@ -430,7 +428,9 @@
           "path": "versions/rings/alpha.json/b16eab3e11e3.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/alpha.json/b16eab3e11e3.json",
           "first_captured": "2026-08-30T16:44:48Z",
-          "carried_by": []
+          "carried_by": [
+            "alpha"
+          ]
         },
         {
           "sha": "9adae4ae840f9ede1b91a24c0827403a85487fe341a8a81bbab383a2a5f102cd",
@@ -439,23 +439,21 @@
           "path": "versions/rings/alpha.json/9adae4ae840f.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/alpha.json/9adae4ae840f.json",
           "first_captured": "2026-09-14T05:03:36Z",
-          "carried_by": [
-            "alpha"
-          ]
+          "carried_by": []
         }
       ]
     },
     {
       "name": "rings/beta.json",
       "ext": ".json",
-      "primary_sha8": "663a4380facf",
+      "primary_sha8": "1d26a5d7d25d",
       "drift": false,
       "version_count": 3,
       "sources": [
         {
           "label": "beta",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-beta/main/.ring/ring.json",
-          "sha8": "663a4380facf",
+          "sha8": "1d26a5d7d25d",
           "on_primary": true,
           "reachable": true
         }
@@ -477,7 +475,9 @@
           "path": "versions/rings/beta.json/1d26a5d7d25d.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/beta.json/1d26a5d7d25d.json",
           "first_captured": "2026-08-30T16:44:48Z",
-          "carried_by": []
+          "carried_by": [
+            "beta"
+          ]
         },
         {
           "sha": "663a4380facf34d72f2c35de6d4326651da6438ee8ded2ecb11c22b18e9e184f",
@@ -486,9 +486,7 @@
           "path": "versions/rings/beta.json/663a4380facf.json",
           "url": "https://raw.githubusercontent.com/kody-w/rapp-release-train/main/versions/rings/beta.json/663a4380facf.json",
           "first_captured": "2026-09-14T05:03:36Z",
-          "carried_by": [
-            "beta"
-          ]
+          "carried_by": []
         }
       ]
     }
